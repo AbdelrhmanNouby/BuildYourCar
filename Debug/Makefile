@@ -34,7 +34,6 @@ LINKER_SCRIPT_DEP:=
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
 ../ECUAL/ \
-../ECUAL/BTN/ \
 ../ECUAL/KEYPAD/ \
 ../ECUAL/LED/ \
 ../ECUAL/MOTOR/ \
@@ -51,7 +50,6 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../ECUAL/BTN/Button.c \
 ../ECUAL/KEYPAD/KEYPAD.c \
 ../ECUAL/LED/LED.c \
 ../ECUAL/MOTOR/MOTOR.c \
@@ -71,7 +69,6 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-ECUAL/BTN/Button.o \
 ECUAL/KEYPAD/KEYPAD.o \
 ECUAL/LED/LED.o \
 ECUAL/MOTOR/MOTOR.o \
@@ -84,7 +81,6 @@ SERVICE/DRIVE/DRIVE.o \
 SERVICE/UI/UI.o
 
 OBJS_AS_ARGS +=  \
-ECUAL/BTN/Button.o \
 ECUAL/KEYPAD/KEYPAD.o \
 ECUAL/LED/LED.o \
 ECUAL/MOTOR/MOTOR.o \
@@ -97,7 +93,6 @@ SERVICE/DRIVE/DRIVE.o \
 SERVICE/UI/UI.o
 
 C_DEPS +=  \
-ECUAL/BTN/Button.d \
 ECUAL/KEYPAD/KEYPAD.d \
 ECUAL/LED/LED.d \
 ECUAL/MOTOR/MOTOR.d \
@@ -110,7 +105,6 @@ SERVICE/DRIVE/DRIVE.d \
 SERVICE/UI/UI.d
 
 C_DEPS_AS_ARGS +=  \
-ECUAL/BTN/Button.d \
 ECUAL/KEYPAD/KEYPAD.d \
 ECUAL/LED/LED.d \
 ECUAL/MOTOR/MOTOR.d \
@@ -136,13 +130,6 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-ECUAL/BTN/Button.o: ../ECUAL/BTN/Button.c
-	@echo Building file: $<
-	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
 ECUAL/KEYPAD/KEYPAD.o: ../ECUAL/KEYPAD/KEYPAD.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0

@@ -7,7 +7,6 @@
 
 #include "LIB/Typedef.h"
 #include "LIB/BIT_Math.h"
-#include "ECUAL/BTN/Button.h"
 #include "ECUAL/LED/LED.h"
 #include "ECUAL/KEYPAD/KEYPAD_interface.h"
 #include "MCAL/DELAY/TIMER0.h"
@@ -29,29 +28,25 @@ int main ()
 	while (1)
 	{
 		UI_GetKeyPressed(&KeyState);    // get which key is pressed 
-		if (KeyState==2)				// if move button pressed 
+		if ( KeyState== MOVE_KEY )				// if move button pressed 
 		{
 			DRIVE_u8Mode(MOTION_STATE);			// move with last motion mode 
-			while (KeyState==2)					// stay here if still pressed 
-			{
-				UI_GetKeyPressed(&KeyState);
-			}
 		}
 
-		else if(KeyState==6)		// if right button pressed 
+		else if( KeyState== RIGHT_KEY )		// if right button pressed 
 		{
 			DRIVE_u8Right();		// rotate right 
 		}
 
-		else if (KeyState==4)		// if left button pressed 
+		else if ( KeyState == LEFT_KEY )		// if left button pressed 
 		{
 			DRIVE_u8Left();			// rotate left 
 		}
 
-		else if (KeyState==5)		// change mode button pressed 
+		else if ( KeyState == MODE_KEY )		// change mode button pressed 
 		{
 			MOTION_STATE++;			// update mode 
-			while (KeyState==5)		// stay here if still pressed 
+			while ( KeyState == MODE_KEY )		// stay here if still pressed 
 			{
 				UI_GetKeyPressed(&KeyState);
 			}

@@ -13,6 +13,11 @@
 #include "../../ECUAL/LED/LED.h"
 #include "../../ECUAL/KEYPAD/KEYPAD_interface.h"
 
+#define MOVE_KEY 	2
+#define RIGHT_KEY	6
+#define LEFT_KEY	4
+#define MODE_KEY	5
+	
 // function to get presed key 
 uint8_t UI_GetKeyPressed(uint8_t* UI_keyModuleReturn);
 

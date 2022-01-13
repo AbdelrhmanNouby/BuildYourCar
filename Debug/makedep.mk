@@ -2,8 +2,6 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-ECUAL\BTN\Button.c
-
 ECUAL\KEYPAD\KEYPAD.c
 
 ECUAL\LED\LED.c

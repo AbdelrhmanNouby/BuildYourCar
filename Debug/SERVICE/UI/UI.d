@@ -5,7 +5,7 @@ SERVICE/UI/UI.d SERVICE/UI/UI.o: ../SERVICE/UI/UI.c \
  ../SERVICE/UI/../../ECUAL/LED/../../LIB/atmega32.h \
  ../SERVICE/UI/../../ECUAL/LED/../../LIB/BIT_Math.h \
  ../SERVICE/UI/../../ECUAL/LED/../../MCAL/DIO/DIO_interface.h \
- c:\users\abdel\desktop\new\ folder\buildyourcar\lib\typedef.h \
+ c:\users\abdel\desktop\sprints\buildyourcar\lib\typedef.h \
  ../SERVICE/UI/../../ECUAL/KEYPAD/KEYPAD_interface.h \
  ../SERVICE/UI/../../ECUAL/KEYPAD/../../LIB/Typedef.h \
  ../SERVICE/UI/../../ECUAL/KEYPAD/../../LIB/atmega32.h \
@@ -29,7 +29,7 @@ SERVICE/UI/UI.d SERVICE/UI/UI.o: ../SERVICE/UI/UI.c \
 
 ../SERVICE/UI/../../ECUAL/LED/../../MCAL/DIO/DIO_interface.h:
 
-c:\users\abdel\desktop\new\ folder\buildyourcar\lib\typedef.h:
+c:\users\abdel\desktop\sprints\buildyourcar\lib\typedef.h:
 
 ../SERVICE/UI/../../ECUAL/KEYPAD/KEYPAD_interface.h:
 
